@@ -4,13 +4,18 @@
     <div class="form-group">
       <label for="email">Email</label>
       <input type="text" class="form-control" id="email" required>
+      <div class="error" *ngIf="isControlInvalid('email')">
+        enter valid email
+      </div>
     </div>
 
     <div class="form-group">
       <label for="password">Password</label>
       <input type="password" class="form-control" id="password" required>
     </div>
-
+    <div class="error" *ngIf="isControlInvalid('password')">
+      password must be min 4 characters
+    </div>
     <button type="submit" class="btn btn-success">Submit</button>
 
   </form>
